@@ -226,3 +226,8 @@ for snr_db in snr_range:
     print(f"{snr_db:<10} | {ber:<10.5f} | {bler:<10.5f}")
 
 print("\nArchitecture Complete: Guard Bands, DC Null, PSD, and IEEE 802.11a Preamble Active.")
+# 6. EXPORT THE TRAINED BRAINS
+print("\n--- Saving the Neural Network Weights ---")
+alice.save('alicetx_model.h5')
+bob.save('bobrx_model.h5')
+print("[System Success!] alicetx_model.h5 and bobrx_model.h5 are saved to file folder.")
